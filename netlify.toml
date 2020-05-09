@@ -4,7 +4,7 @@
 # DO NOT REMOVE THIS (contact @kubernetes/sig-docs-leads)
 publish = "public"
 functions = "functions"
-command = "make non-production-build"
+command = "cd themes/docsy && git submodule update -f --init && cd ../.. && make non-production-build"
 
 [build.environment]
 HUGO_VERSION = "0.70.0"
