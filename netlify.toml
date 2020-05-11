@@ -15,13 +15,13 @@ HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
-command = "make deploy-preview"
+command = "cd themes/docsy && git submodule update -f --init && cd ../.. && make deploy-preview"
 
 [context.branch-deploy]
-command = "make deploy-preview"
+command = "cd themes/docsy && git submodule update -f --init && cd ../.. && make deploy-preview"
 
 [context.master]
 # This context is triggered by the `master` branch and allows search indexing
 # DO NOT REMOVE THIS (contact @kubernetes/sig-docs-leads)
 publish = "public"
-command = "make production-build"
+command = "cd themes/docsy && git submodule update -f --init && cd ../.. && make production-build"
